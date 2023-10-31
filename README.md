@@ -5,7 +5,7 @@
 ```
 git clone https://github.com/qhagayla/TeamTechDiggersProject.git
 ```
-###Frontend
+### Frontend
 #### Install dependencies
 
 ```
@@ -20,8 +20,8 @@ npm install
 npm expo start
 ```
 
-###Backend
-### Usage
+### Backend
+#### Run the server
 ```
 node loginserver
 ```
