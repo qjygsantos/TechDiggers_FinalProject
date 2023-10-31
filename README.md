@@ -23,8 +23,8 @@ npm expo start
 ### Backend
 #### Run the server
 ```
-node loginserver
+node loginserver.js
 ```
 ```
-node signupserver
+node signupserver.js
 ```
