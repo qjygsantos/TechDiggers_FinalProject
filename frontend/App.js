@@ -16,7 +16,7 @@ function App() {
         <Stack.Screen
           name="Welcome"
           component={WelcomeScreen}
-          options={{ headerShown: true }} // Show the header for the "Welcome" screen
+          options={{ headerShown: false }} // Show the header for the "Welcome" screen
         />
         <Stack.Screen
           name="Login"
