@@ -9,7 +9,7 @@ function SignUpScreen({ navigation }) {
   const handleSignup = async () => {
     try {
       // Make a POST request to the server for signup
-      const response = await axios.post('http://localhost:3001/signup', {
+      const response = await axios.post('http://localhost:3000/signup', {
         username,
         password,
       });
