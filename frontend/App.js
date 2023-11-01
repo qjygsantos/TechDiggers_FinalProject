@@ -16,22 +16,32 @@ function App() {
         <Stack.Screen
           name="Welcome"
           component={WelcomeScreen}
-          options={{ headerShown: false }} // Show the header for the "Welcome" screen
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Login"
           component={LoginScreen}
-          options={{ headerShown: true }} // Show the header for the "Login" screen
+          options={{
+            headerStyle: {
+              backgroundColor: '#9E711E', // Change header background color
+              borderBottomWidth: 0, // Remove the bottom border
+            },
+          }}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUpScreen}
-          options={{ headerShown: true }} // Show the header for the "SignUp" screen
+          options={{
+            headerStyle: {
+              backgroundColor: '#9E711E', // Change header background color
+              borderBottomWidth: 0, // Remove the bottom border
+            },
+          }}
         />
         <Stack.Screen
           name="Main"
           component={MainScreen}
-          options={{ headerShown: false }} // Hide the header for the "Main" screen
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

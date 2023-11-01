@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontFamily: '../fonts/IBMPlexMono-Regular.ttf',
-    fontSize: 16,
+    fontSize: 20,
     color: 'black',
   },
 });

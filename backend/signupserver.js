@@ -11,11 +11,13 @@ app.use(cors());
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://qhagayla:1234@cluster0.qmrdbgo.mongodb.net/test', {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 });
 
 // Define a user schema and model
 const userSchema = new mongoose.Schema({
+  firstName: String, // Add firstName and lastName fields
+  lastName: String,
   username: String,
   password: String,
 });
@@ -24,10 +26,10 @@ const User = mongoose.model('User', userSchema);
 
 // API endpoint for user signup
 app.post('/signup', async (req, res) => {
-  const { username, password } = req.body;
+  const { firstName, lastName, username, password } = req.body;
 
-  if (!username || !password) {
-    return res.status(400).json({ message: 'Username and password are required.' });
+  if (!firstName || !lastName || !username || !password) {
+    return res.status(400).json({ message: 'All fields are required.' });
   }
 
   // Check if the user already exists
@@ -39,6 +41,8 @@ app.post('/signup', async (req, res) => {
 
   // Create a new user and save it to the database
   const newUser = new User({
+    firstName,
+    lastName,
     username,
     password,
   });
