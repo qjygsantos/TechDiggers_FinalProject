@@ -28,6 +28,7 @@ function LoginScreen({ navigation }) {
       if (response.data.message === 'Login successful') {
         // Store a token or user session using AsyncStorage
         AsyncStorage.setItem('token', 'yourAuthToken');
+        AsyncStorage.setItem('username', username);
 
         // Navigate to the Home screen
         navigation.navigate('Main');
@@ -116,7 +117,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'top',
     backgroundColor: '#9E711E',
   },
   logo: {
