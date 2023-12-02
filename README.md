@@ -31,3 +31,5 @@ node signupserver.js
 ```
 node meserver.js
 ```
+```
+python server.py
