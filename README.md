@@ -3,7 +3,7 @@
 #### Clone this repository
 
 ```
-git clone https://github.com/qhagayla/TeamTechDiggersProject.git
+git clone https://github.com/qjygsantos/TechDiggers_FinalProject.git
 ```
 ### Frontend
 #### Install dependencies
