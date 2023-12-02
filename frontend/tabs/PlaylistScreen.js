@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 
 const PlaylistScreen = () => {
   const [playlists, setPlaylists] = useState([
@@ -12,8 +12,14 @@ const PlaylistScreen = () => {
     { id: '7', name: 'Classic Road Trip Songs' },
     { id: '8', name: 'Cooking Jazz & Bossa' },
     { id: '9', name: 'Bossa Nova Covers' },
-    // Add more playlists as needed
+    { id: '10', name: 'Michale Buble' },
+    { id: '11', name: 'Ratatouille Vibes' },
+    { id: '12', name: 'Hot Hits PH' },
+    { id: '13', name: 'Slow Dancing' },
+    { id: '14', name: 'New York Bar Classics' },
   ]);
+
+  const numColumns = 3; // Number of columns per row
 
   const renderPlaylistItem = ({ item }) => (
     <TouchableOpacity style={styles.playlistItem} onPress={() => handlePlaylistPress(item)}>
@@ -33,10 +39,14 @@ const PlaylistScreen = () => {
         data={playlists}
         keyExtractor={(item) => item.id}
         renderItem={renderPlaylistItem}
+        numColumns={numColumns} // Set the number of columns
       />
     </View>
   );
 };
+
+const { width } = Dimensions.get('window');
+const itemWidth = (width - 80) / 3; // Calculate item width based on the screen width and padding
 
 const styles = StyleSheet.create({
   container: {
@@ -50,13 +60,18 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   playlistItem: {
+    width: itemWidth,
     padding: 15,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    marginBottom: 20,
+    marginRight: 10,
+    borderWidth: 3,
+    borderColor: 'green',
+    borderRadius: 8,
   },
   playlistName: {
     fontSize: 16,
+    textAlign: 'center',
   },
-});
+}); 
 
 export default PlaylistScreen;
