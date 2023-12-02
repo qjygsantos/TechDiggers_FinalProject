@@ -21,7 +21,7 @@ npm expo start
 ```
 
 ### Backend
-#### Run the server
+#### Run the server in four (4) additional terminals
 ```
 node loginserver.js
 ```
