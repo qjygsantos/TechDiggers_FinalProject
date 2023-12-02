@@ -8,7 +8,7 @@ const cors = require('cors');
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect('mongodb+srv://qjygsantos:julsjulsjuls@cluster0.cc7idpn.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://qgsoriano1:dTFT7PvCodNQkKhf@cluster0.l4ph78c.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

@@ -8,9 +8,9 @@ const HomeScreen = () => {
   const [userInput, setUserInput] = useState('');
 
   const albumImages = [
-    'C:\\Users\\julli\\TeamTechDigger\\TeamTechDiggersProject\\frontend\\assets\\queenAlbum1.jpg',
-    'C:\\Users\\julli\\TeamTechDigger\\TeamTechDiggersProject\\frontend\\assets\\brunoMarsAlbum1.jpg',
-    'C:\\Users\\julli\\TeamTechDigger\\TeamTechDiggersProject\\frontend\\assets\\mariahCareyAlbum1.jpg'
+    require('C:\\Users\\GSori\\OneDrive\\Documents\\4thYear\\EmTech3\\TeamTechDiggersProject\\frontend\\assets\\brunoMarsAlbum1.jpg'),
+    require('C:\\Users\\GSori\\OneDrive\\Documents\\4thYear\\EmTech3\\TeamTechDiggersProject\\frontend\\assets\\queenAlbum1.jpg'),
+    require('C:\\Users\\GSori\\OneDrive\\Documents\\4thYear\\EmTech3\\TeamTechDiggersProject\\frontend\\assets\\bubleAlbum1.jpg'),
   ];
 
   const opacity = useSharedValue(1);
@@ -36,7 +36,7 @@ const HomeScreen = () => {
         },
         body: JSON.stringify({ text }),
       });
-
+  
       if (response.ok) {
         const data = await response.json();
         setRecommendedTracks(data.tracks);
